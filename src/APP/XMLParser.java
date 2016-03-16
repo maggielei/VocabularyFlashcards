@@ -22,13 +22,11 @@ public class XMLParser {
                 Node node = definitionList.item(i);
                 Element element = (Element) node;
                 definitionMap.put(element.getElementsByTagName("english").item(0).getTextContent(),
-                        element.getElementsByTagName("german").item(0).getTextContent());
+                                  element.getElementsByTagName("german").item(0).getTextContent());
             }
         }
-        catch(Exception e){
+        catch(Exception e) {
             e.printStackTrace();
         }
-
     }
-
 }

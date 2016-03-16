@@ -1,7 +1,5 @@
 package UI;
 
-import javafx.application.Platform;
-
 public class VFEventHandler {
     private VFUI ui;
 

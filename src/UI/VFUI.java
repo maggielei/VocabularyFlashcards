@@ -18,19 +18,21 @@ public class VFUI extends Pane{
         eventHandler = new VFEventHandler(this);
         initStartMenu();
     }
-
     public void initStartMenu(){
         marginlessInsets = new Insets(5, 5, 5, 5);
         startMenu = new BorderPane();
         startMenu.resize(600, 500);
         startMenu.setPadding(marginlessInsets);
-
         buttonBox = new VBox(5);
         startButton = new Button("Start");
         exitButton = new Button("Exit");
         startButton.setMaxWidth(100);
         exitButton.setMaxWidth(100);
 
+        buttonBox.getChildren().addAll(startButton, exitButton);
+        buttonBox.setAlignment(Pos.CENTER);
+        startMenu.setCenter(buttonBox);
+        
         buttonBox.getChildren().addAll(startButton, exitButton);
         buttonBox.setAlignment(Pos.CENTER);
         startMenu.setCenter(buttonBox);
@@ -48,9 +50,9 @@ public class VFUI extends Pane{
             }
         });
     }
-
+    
     public void initGameScreen(){
-
+        
     }
 
     public BorderPane getStartMenu(){
